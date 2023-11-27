@@ -120,7 +120,7 @@ UrlHabitacion = 'http://localhost:5000/habitacion';
 
   // PARA MANTENIMIENTO EN SERVICIO PARA RESERVA
 
-  UrlReserva = 'http://localhost:8080/reserva';
+  UrlReserva = 'http://localhost:5000/reserva';
 
   getReservas() {
     return this.http.get<Reserva[]>(this.UrlReserva);
@@ -144,7 +144,7 @@ UrlHabitacion = 'http://localhost:5000/habitacion';
 
    // PARA MANTENIMIENTO EN SERVICIO PARA USUARIO
 
-  UrlUsuario = 'http://localhost:8080/usuario';
+  UrlUsuario = 'http://localhost:5000/usuario';
 
   getUsuarios() {
     return this.http.get<Usuario[]>(this.UrlUsuario);
