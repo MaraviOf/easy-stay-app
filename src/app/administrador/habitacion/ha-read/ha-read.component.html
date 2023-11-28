@@ -6,12 +6,12 @@
   <p>Número: {{ habitacion.numero }}</p>
   <p>Estado: {{habitacion.estado? 'Disponible':'No Disponible'}}</p>
   <h2>Habitacion</h2>
-  <img style="width: 250px;" src="{{ habitacion.imagen }}">
+  <img style="width: 250px;" src="{{ habitacion.imagen }}" >
   <p>Nombre de Hotel: {{ habitacion.hotel.nombre }}</p>
   <p>Ciudad de Hotel: {{ habitacion.hotel.ciudad }}</p>
   <p>Direccion de Hotel: {{ habitacion.hotel.direccion }}</p>
   <h2>Hotel</h2>
-  <img style="width: 250px;" src="{{ habitacion.hotel.imagen }}">
+  <img style="width: 250px;" src="{{ habitacion.hotel.imagen }}" >
   <!-- Agregar botón para eliminar habitación -->
   <button (click)="editarHabitacion(habitacion.id!)">Editar</button>
   <button (click)="eliminarHabitacion(habitacion.id!)">Eliminar</button>
