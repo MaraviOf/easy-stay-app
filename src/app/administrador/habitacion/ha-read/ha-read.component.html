@@ -1,23 +1,24 @@
 <app-dashboard></app-dashboard>
-<div class="text-center">
-  <h3 class="m-5">Listado de Hoteles</h3>
-</div>
-<div style="text-align: center;" *ngFor="let habitacion of habitaciones">
-  <h2>{{ habitacion.nombre }}</h2>
-  <p>Tipo: {{ habitacion.tipoHabitacion.nombre_tipo }}</p>
-  <p>Capacidad: {{ habitacion.capacidad }}</p>
-  <p>Precio: {{ habitacion.precio | currency }}</p>
-  <p>Número: {{ habitacion.numero }}</p>
-  <p>Estado: {{habitacion.estado? 'Disponible':'No Disponible'}}</p>
-  <h2>Habitacion</h2>
-  <img style="width: 250px;" src="{{ habitacion.imagen }}" >
-  <p>Nombre de Hotel: {{ habitacion.hotel.nombre }}</p>
-  <p>Ciudad de Hotel: {{ habitacion.hotel.ciudad }}</p>
-  <p>Direccion de Hotel: {{ habitacion.hotel.direccion }}</p>
-  <h2>Hotel</h2>
-  <img style="width: 250px;" src="{{ habitacion.hotel.imagen }}" >
-  <!-- Agregar botón para eliminar habitación -->
-  <button (click)="editarHabitacion(habitacion.id!)">Editar</button>
-  <button (click)="eliminarHabitacion(habitacion.id!)">Eliminar</button>
-
-</div>
+<div class="container p-4">
+  <div class="row">
+          
+              <div class="col-md-4" *ngFor="let habitacion of habitaciones">
+                <div class="card text-center">
+                  
+                  <img class="card-img-top" style="width: 100%; height: 400px;"
+                    src="{{ habitacion.imagen }}">
+          
+                  <div class="card-body">
+                    <h2 >{{ habitacion.nombre }}</h2>
+                    <p style="font-size: 24px;">Tipo: {{ habitacion.tipoHabitacion.nombre_tipo }}</p>
+                    <p style="font-size: 24px;">Capacidad: {{ habitacion.capacidad }}</p>
+                    <p style="font-size: 24px;">Número: {{ habitacion.numero }}</p>
+                    <p style="font-size: 24px;">Estado: {{habitacion.estado? 'Disponible':'No Disponible'}}</p>
+                    <p style="font-size: 24px;">Precio: {{ habitacion.precio | currency }}</p>
+                    <button class="btn btn-success" (click)="reservarHabitacion()">Reservar</button>
+                  </div>
+                </div>
+              </div>
+          
+            </div>
+          </div>

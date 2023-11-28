@@ -11,6 +11,8 @@ import { ServicioService } from 'src/app/servicio/servicio.service';
 export class HoReadComponent implements OnInit {
 
   hoteles: Hotel[] = [];
+  ciudades: string[] = [];
+  ciudadBusqueda: string = '';
 
   constructor(private servicio: ServicioService, private router: Router) { }
 
@@ -38,6 +40,23 @@ export class HoReadComponent implements OnInit {
           });
       });
   }
+  obtenerHoteles() {
+    this.servicio.getHoteles().subscribe(data => {
+      this.hoteles = data;
+      // Obtener ciudades únicas para el combo box
+      this.ciudades = Array.from(new Set(this.hoteles.map(hotel => hotel.ciudad)));
+    });
+  }
 
-
+  buscarPorCiudad() {
+    if (this.ciudadBusqueda) {
+      this.servicio.buscarHotelesPorCiudad(this.ciudadBusqueda).subscribe(data => {
+        this.hoteles = data;
+      });
+    } else {
+      // Si no se proporciona una ciudad, obtener todos los hoteles
+      this.obtenerHoteles();
+    }
+  }
+  
 }

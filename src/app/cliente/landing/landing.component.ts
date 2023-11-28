@@ -36,11 +36,14 @@ export class LandingComponent {
   }
 
   Faq() {
-    this.router.navigate(["faq"]);
+    this.router.navigate(["Faq"]);
   }
 
   VistaUsuarioHabitacion() {
     this.router.navigate(["listarUsu-habitacion"]);
   }
-
+  // Método para redirigir a la edición de habitación
+  reservarHabitacion() {
+    this.router.navigate(['/registrarUsu-reserva']);
+  }
 }

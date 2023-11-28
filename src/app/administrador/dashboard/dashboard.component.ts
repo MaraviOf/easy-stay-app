@@ -33,5 +33,8 @@ export class DashboardComponent {
   RegistrarReserva() {
     this.router.navigate(["registrar-reserva"])
   }
+  Logout() {
+    this.router.navigate(["login"]);
+  }
 }
 

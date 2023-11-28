@@ -65,7 +65,10 @@ export class ServicioService {
   eliminarHotel(id:number){
     return this.http.delete<Hotel>(this.Url+"/"+ id);
   }
-
+  buscarHotelesPorCiudad(ciudad: string): Observable<Hotel[]> {
+    const url = `${this.Url}/buscarPorCiudad/${ciudad}`;
+  return this.http.get<Hotel[]>(url);
+  }
 
   // PARA MANTENIMIENTO EN SERVICIO PARA HABITACION
 
@@ -144,11 +147,12 @@ UrlHabitacion = 'http://localhost:5000/habitacion';
 
    // PARA MANTENIMIENTO EN SERVICIO PARA USUARIO
 
-  UrlUsuario = 'http://localhost:5000/usuario';
+  UrlUsuario = 'http://localhost:5000/usuarios';
 
   getUsuarios() {
     return this.http.get<Usuario[]>(this.UrlUsuario);
   }
+
 
   // PARA MANTENIMIENTO EN SERVICIO PARA TIPOHABITACION
 
