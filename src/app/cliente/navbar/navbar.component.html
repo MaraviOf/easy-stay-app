@@ -1,0 +1,34 @@
+<div class="container my-1">
+  <div class="row">
+    <div class="col-12 text-end">
+      <button (click)="Iniciar()" class="btn me-2 rounded">
+        <i class="fa-regular fa-user"></i> Sing In
+      </button>
+
+      <button (click)="RegistrarUsu()" class="btn btn-secondary rounded">
+        <i class="fa-solid fa-user"></i> Sing Up
+      </button>
+    </div>
+  </div>
+</div>
+<nav class="navbar navbar-expand-lg bg-light mb-2" data-bs-theme="light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Easy Stay</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03"
+      aria-controls="navbarColor03" aria-expanded="true" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-collapse collapse show" id="navbarColor03">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Inicio
+            <span class="visually-hidden">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="Faq()">Nosotros</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

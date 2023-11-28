@@ -1,0 +1,41 @@
+<app-dashboard></app-dashboard>
+<div class="container col-md-6">
+  <div class="card">
+    <div class="card-header d-flex justify-content-between align-items-center">
+      <h3>Editar Hoteles</h3>
+    </div>
+    <div class="card-body">
+      <form (ngSubmit)="Actualizar(hoteles)" #hotelForm="ngForm" enctype="multipart/form-data">
+        <div class="form-group">
+          <label for="idInput">Id</label>
+          <input type="text" class="form-control" [(ngModel)]="hoteles.id" name="id" id="idInput" readonly>
+        </div>
+        <div class="form-group">
+          <label for="nombreInput">Nombres</label>
+          <input type="text" class="form-control" [(ngModel)]="hoteles.nombre" name="nombre" id="nombreInput" required>
+        </div>
+        <div class="form-group">
+          <label for="ciudadInput">Ciudad</label>
+          <input type="text" class="form-control" [(ngModel)]="hoteles.ciudad" name="ciudad" id="ciudadInput" required>
+        </div>
+        <div class="form-group">
+          <label for="direccionInput">Direccion</label>
+          <input type="text" class="form-control" [(ngModel)]="hoteles.direccion" name="direccion" id="direccionInput"
+            required>
+        </div>
+        <div class="form-group">
+          <label for="telefonoInput">Telefono</label>
+          <input type="text" class="form-control" [(ngModel)]="hoteles.telefono" name="telefono" id="telefonoInput"
+            required>
+        </div>
+        <div class="form-group">
+          <label for="imagen">Imagen</label>
+          <input type="file" (change)="onFileSelected($event)" class="form-control" name="imagen">
+        </div>
+        <div style="margin-top: 15px;">
+          <button type="submit" class="btn btn-primary">Actualizar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

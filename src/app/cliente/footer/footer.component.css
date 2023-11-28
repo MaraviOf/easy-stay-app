@@ -1,0 +1,26 @@
+* {
+  list-style: none;
+  text-decoration: none;
+}
+
+.socials li a {
+  width: 40px;
+  height: 40px;
+  color: white;
+  font-size: 30px;
+  background: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+}
+
+.socials li a:hover {
+  background: black;
+  width: 40px;
+  height: 40px;
+}
+
+.sections p a:hover{
+  font-weight: bold;
+}

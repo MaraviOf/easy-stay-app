@@ -1,0 +1,52 @@
+<div class="wrapper">
+  <div class="container main">
+    <div class="row">
+      <div class="col-md-12 right">
+        <div class="input-box">
+          <header>Registrate</header>
+          <form  (ngSubmit)= "formSubmit()">
+
+            <div class="input-field">
+              <input [(ngModel)] = "user.username" id="username" class="input" name="username" type="text" required autofocus>
+              <label for="">Usuario</label>
+            </div>
+
+
+            <div class="input-field">
+              <input [(ngModel)] ="user.password"  class="input" name="password" type="password" required>
+              <label for="">Password</label>
+            </div>
+
+            <div class="input-field">
+              <input  [(ngModel)] ="user.nombre"  class="input" name="nombre" type="text" required>
+              <label for="">Nombre</label>
+            </div>
+
+            <div class="input-field">
+              <input  [(ngModel)] ="user.apellido" class="input" name="apellido" type="text" required>
+              <label for="">Apellido</label>
+            </div>
+
+            <div class="input-field">
+              <input [(ngModel)] ="user.email" class="input" name="email" type="email" required>
+              <label for="">Email</label>
+            </div>
+
+            <div class="input-field">
+              <input [(ngModel)] ="user.telefono" class="input" name="telefono" type="tel" required>
+              <label for="">Telefono</label>
+            </div>
+
+            <div class="input-field">
+              <button type="submit" class="btn btn-secondary" value="Iniciar">Registrate</button>
+            </div>
+
+            <div class="signin">
+              <p>Ya tienes una cuenta? <a [routerLink]="'/login'">Inicia Sesion</a></p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

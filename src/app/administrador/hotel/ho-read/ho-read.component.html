@@ -1,0 +1,36 @@
+<app-dashboard></app-dashboard>
+<div class="container">
+    <div class="table-responsive">
+        <div class="text-center">
+            <h3 class="m-5">Listado de Hoteles</h3>
+        </div>
+        <table class="table table-hover">
+            <thead class="text-center">
+                <tr class="table-dark">
+                    <th>ID</th>
+                    <th>NOMBRE</th>
+                    <th>CIUDAD</th>
+                    <th>DIRECCION</th>
+                    <th>TELEFONO</th>
+                    <th>IMAGEN</th>
+                    <th colspan="2">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let hotel of hoteles" class="text-center">
+                    <td>{{hotel.id}}</td>
+                    <td>{{hotel.nombre}}</td>
+                    <td>{{hotel.ciudad}}</td>
+                    <td>{{hotel.direccion}}</td>
+                    <td>{{hotel.telefono}}</td>
+                    <td>
+                        <img style="width: 40%;" src="{{hotel.imagen}}" alt="">
+                    </td>
+                    <td><a (click)="Editar(hotel)" class="btn btn-success"><i class="fas fa-marker"></i></a></td>
+                    <td><a (click)="Eliminar(hotel.id!)" class="btn btn-danger"><i class="far fa-trash-alt"></i></a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

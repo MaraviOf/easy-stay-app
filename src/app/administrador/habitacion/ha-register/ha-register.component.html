@@ -1,0 +1,60 @@
+<app-dashboard></app-dashboard>
+<div class="container col-md-6">
+  <div class="card">
+    <div class="card-body">
+      <h1 class="text-center">Registrar Habitación</h1>
+      <form action="" enctype="multipart/form-data" (ngSubmit)="registrarHabitacion()">
+        <div class="form-group">
+          <label for="nombreInput">Nombre</label>
+          <input [(ngModel)]="habitacion.nombre" class="form-control my-3 p-3" type="text" name="nombre"
+            id="nombreInput" placeholder="Ingrese el nombre" required autofocus>
+        </div>
+        <div class="form-group">
+          <label for="nombre">Nombre:</label>
+          <input [(ngModel)]="habitacion.numero" class="form-control my-3 p-3" id="numero" name="numero" type="number"
+            placeholder="Ingrese el número">
+        </div>
+        <div class="form-group">
+          <label for="nombre">Seleccione el tipo de habitación:</label>
+          <select [(ngModel)]="habitacion.tipoHabitacion" class="form-control my-3 p-3" id="tipo" name="tipo" required>
+            <option selected disabled value="">Tipo Habitacion...</option>
+            <option *ngFor="let tipo of tipohabitacion" [ngValue]="tipo">{{tipo.nombre_tipo}}</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="nombre">Capacidad:</label>
+          <input [(ngModel)]="habitacion.capacidad" class="form-control my-3 p-3" id="capacidad" name="capacidad"
+            type="number" placeholder="Ingrese la capacidad">
+        </div>
+        <div class="form-group">
+          <label for="nombre">Precio:</label>
+          <input [(ngModel)]="habitacion.precio" class="form-control my-3 p-3" id="numero" name="numero" type="number"
+            placeholder="Ingrese el precio">
+        </div>
+        <div class="form-group">
+          <label style="margin-top: 3px;" for="imagenInput">Imagen</label>
+          <input type="file" #imagenInputFile (change)="onFileChange($event)" class="form-control my-3 p-3"
+            name="imagen" accept="image/png, image/jpeg, image/jpg, image/gif">
+        </div>
+        <div class="form-group">
+          <label for="estado">Seleccione la Disponibilidad:</label>
+          <select [(ngModel)]="habitacion.estado" class="form-control my-3 p-3" id="estado" name="estado" required>
+            <option selected disabled value="">Seleccione</option>
+            <option [ngValue]="true">Disponible</option>
+            <option [ngValue]="false">No disponible</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="hotel">Seleccione el Hotel:</label>
+          <select [(ngModel)]="habitacion.hotel" class="form-control my-3 p-3" id="hotel" name="hotel" required>
+            <option selected disabled value="">Seleccione</option>
+            <option *ngFor="let hot of hotel" [ngValue]="hot">{{ hot.nombre }}</option>
+          </select>
+        </div>
+        <div style="margin-top: 15px;">
+          <button class="btn btn-danger" type="submit">Guardar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

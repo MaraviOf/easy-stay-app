@@ -1,0 +1,32 @@
+<div class="wrapper">
+  <div class="container main">
+    <div class="row">
+      <div class="col-md-12 right">
+        <div class="input-box">
+          <header>Iniciar Sesión</header>
+          <form  (ngSubmit) = "formSubmit()">
+
+            <div class="input-field">
+              <input  [(ngModel)] = "loginData.username" id="email" class="input" name="username" type="text" required autofocus>
+              <label for="email">Email</label>
+            </div>
+
+
+            <div class="input-field">
+              <input [(ngModel)] = "loginData.password" class="input" name="password" type="password" required>
+              <label for="pass">Password</label>
+            </div>
+
+            <div class="input-field">
+              <button type="submit" class="btn btn-secondary" value="Iniciar">Login</button>
+            </div>
+
+            <div class="signin">
+              <p>No estas registrado? <a [routerLink]="'/register'">Registrate aqui</a></p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+<app-dashboard></app-dashboard>
+<div class="container col-md-6">
+  <div class="card">
+    <div class="card-body">
+      <h1 class="text-center">Registrar Hotel</h1>
+      <form action="" enctype="multipart/form-data" (ngSubmit)="Guardar()">
+        <div class="form-group">
+          <label style="margin-top: 3px;" for="nombreInput">Nombres</label>
+          <input style="margin-top: 5px;" type="text" class="form-control" [(ngModel)]="hoteles.nombre" name="nombre"
+            id="nombreInput" required>
+        </div>
+        <div class="form-group">
+          <label style="margin-top: 3px;" for="ciudadInput">Ciudad</label>
+          <input style="margin-top: 5px;" type="text" class="form-control" [(ngModel)]="hoteles.ciudad" name="ciudad"
+            id="ciudadInput">
+        </div>
+        <div class="form-group">
+          <label style="margin-top: 3px;" for="direccionInput">Direccion</label>
+          <input style="margin-top: 5px;" type="text" class="form-control" [(ngModel)]="hoteles.direccion"
+            name="direccion" id="direccionInput">
+        </div>
+        <div class="form-group">
+          <label style="margin-top: 3px;" for="telefonoInput">Telefono</label>
+          <input style="margin-top: 5px;" type="text" class="form-control" [(ngModel)]="hoteles.telefono"
+            name="telefono" id="telefonoInput">
+        </div>
+        <div class="form-group">
+          <label style="margin-top: 3px;" for="imagenInput">Imagen</label>
+          <input type="file" #imagenInputFile (change)="onFileChange($event)" class="form-control" name="imagen"
+            accept="image/png, image/jpeg, image/jpg, image/gif">
+        </div>
+        <div style="margin-top: 15px;">
+          <button class="btn btn-danger">guardar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
