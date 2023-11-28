@@ -31,6 +31,8 @@ import { ReadHaComponent } from './cliente/habitacion/read-ha/read-ha.component'
 import { ReadHoComponent } from './cliente/hotel/read-ho/read-ho.component';
 import { ReadReComponent } from './cliente/reserva/read-re/read-re.component';
 import { RegisterReComponent } from './cliente/reserva/register-re/register-re.component';
+import { RegisterComponent } from './cliente/register/register.component';
+import { DashboardComponent } from './administrador/dashboard/dashboard.component';
 
 
 @NgModule({
@@ -53,7 +55,9 @@ import { RegisterReComponent } from './cliente/reserva/register-re/register-re.c
     ReadHaComponent,
     ReadHoComponent,
     ReadReComponent,
-    RegisterReComponent
+    RegisterReComponent,
+    RegisterComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
