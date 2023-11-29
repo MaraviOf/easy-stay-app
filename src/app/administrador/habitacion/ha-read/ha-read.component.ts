@@ -44,6 +44,9 @@ export class HaReadComponent implements OnInit {
     this.router.navigate(['/editar-habitacion', id]);
   }
 
+  reservarHabitacion() {
+    this.router.navigate(['/registrarUsu-reserva']);
+  }
 
 }
 
