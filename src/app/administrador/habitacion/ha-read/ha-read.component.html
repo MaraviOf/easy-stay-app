@@ -15,7 +15,11 @@
                     <p style="font-size: 24px;">Número: {{ habitacion.numero }}</p>
                     <p style="font-size: 24px;">Estado: {{habitacion.estado? 'Disponible':'No Disponible'}}</p>
                     <p style="font-size: 24px;">Precio: {{ habitacion.precio | currency }}</p>
-                    <button class="btn btn-success" (click)="reservarHabitacion()">Reservar</button>
+                    <td><a (click)="editarHabitacion(habitacion.id!)" class="btn btn-success"><i class="fas fa-marker"></i></a>
+                    </td>
+                    <td><a (click)="eliminarHabitacion(habitacion.id!)" class="btn btn-danger"><i
+                                class="far fa-trash-alt"></i></a>
+                    </td>
                   </div>
                 </div>
               </div>

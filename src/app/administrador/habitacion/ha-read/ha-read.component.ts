@@ -44,9 +44,6 @@ export class HaReadComponent implements OnInit {
     this.router.navigate(['/editar-habitacion', id]);
   }
 
- // Método para redirigir a la edición de habitación
- reservarHabitacion() {
-  this.router.navigate(['/registrarUsu-reserva']);
-}
+
 }
 
